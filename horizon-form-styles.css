@@ -1,0 +1,132 @@
+/* Horizon Scanning Form Styles - Updated */
+.formio-form {
+    background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%) !important;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main form container */
+.formio-form .formio-component {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin-bottom: 0 !important;
+}
+
+/* Create one main white container */
+.formio-form {
+    position: relative;
+}
+
+.formio-form::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+.formio-form > * {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+}
+
+/* Title styling */
+.formio-form h1,
+.formio-form .form-title {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: transparent !important;
+    background: linear-gradient(135deg, #2c5282, #1a365d) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+}
+
+/* Description text */
+.formio-form p {
+    font-size: 1.1rem !important;
+    color: #5a6c7d !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    max-width: 600px !important;
+    margin: 0 auto 40px auto !important;
+}
+
+/* Remove individual component backgrounds */
+.form-group {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+}
+
+/* Style form inputs */
+.form-control {
+    padding: 15px !important;
+    border: 2px solid #e9ecef !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    background: #f8f9fa !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+}
+
+.form-control:focus {
+    border-color: #2c5282 !important;
+    background: white !important;
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1) !important;
+    transform: translateY(-2px);
+    outline: none !important;
+}
+
+/* Style labels */
+.control-label {
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 8px !important;
+    font-size: 1rem !important;
+}
+
+/* Style submit button */
+.btn-primary {
+    background: linear-gradient(135deg, #2c5282, #1a365d) !important;
+    border: none !important;
+    padding: 18px 40px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    min-width: 200px !important;
+    margin-top: 20px !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 25px rgba(44, 82, 130, 0.4) !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .formio-form > * {
+        padding: 30px 20px;
+    }
+    
+    .formio-form h1 {
+        font-size: 2rem !important;
+    }
+}
