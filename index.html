@@ -55,6 +55,13 @@
             border-bottom: 2px solid #e2e8f0;
         }
 
+        /* NEW: Logo image styles */
+        .flutter-logo-img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
         .flutter-logo {
             font-size: 1.4rem;
             font-weight: 800;
@@ -303,6 +310,10 @@
             .flutter-logo {
                 font-size: 1.2rem;
             }
+
+            .flutter-logo-img {
+                max-width: 150px;
+            }
         }
 
         /* Add subtle animations */
@@ -325,6 +336,30 @@
 <body>
     <div class="container">
         <div class="flutter-branding">
+            <!-- 
+            ═══════════════════════════════════════════════════════════════════
+            📍 LOGO PLACEHOLDER - EDIT HERE
+            ═══════════════════════════════════════════════════════════════════
+            
+            TO ADD YOUR FLUTTER LOGO:
+            1. Convert your image to base64 at: https://base64.guru/converter/encode/image
+            2. Replace "YOUR_BASE64_STRING_HERE" below with your base64 string
+            3. Keep the format: data:image/png;base64,YOUR_BASE64_STRING_HERE
+               (Change "png" to "jpg" or "svg+xml" if using different format)
+            
+            Example formats:
+            - PNG: data:image/png;base64,iVBORw0KGgoAAAANS...
+            - JPG: data:image/jpeg;base64,/9j/4AAQSkZJRg...
+            - SVG: data:image/svg+xml;base64,PHN2ZyB4bWxucz...
+            
+            ═══════════════════════════════════════════════════════════════════
+            -->
+            <img 
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAABkCAYAAACvgC0OAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAQAElEQVR4AexdCWAMVx//WSJ1H3XHLa4kCIkKWkdTkYqzQRJK4ioJH0EoSRDCVzepVCmhjih1pghKKnG1KREpmjaISIVStCVBHfXNW+TbbGZ23maP7G7+4c3Oe+9//t78Z968mXlP8YL+CAFCwOIRUID+CAFCwOIRoEC3+CYmBwkBgAKdjgJCoAggYMhALwLwkYuEgHkgQIFuHu1EVhICOiFAga4TfMRMCJgHAhTo5tFOZCUhoBMC5hroOjlNzIRAUUOAAr2otTj5WyQRoEAvks1OThc1BCjQi1qLk79FEgEK9PzNTiWEgMUhQIFucU1KDhEC+RGgQM+PCZUQAhaHAAW6xTUpOUQI5EeAAj0/JoYsIdmEQKEgQIFeKLCTUkLAuAhQoBsXb9JGCBQKAhTohQI7KSUEjIsABbpx8TakNpJNCEgiQIEuCQ1VEAKWgwAFuuW0JXlCCEgioPAdMwOmnvYeSJB04LfrN7jsTziRJCnD0iqC56yA54eTZdOzZ88M5vrVjExZ/czGz9duM5gNli54xapoAeNJuWno6BD8mHQeH44KxuPH/yjdn780CoxOEb3jCEw9XfwlQ2m02ObPv/7msv/S1eti7BZZdjLxAmIOnpJNz5//y+u/1nR/38+W1c9sTLl4WWvZxPASgTaO9ujt4YrDCclo2qQB3nfrjNS0TGzdfRSRa7Yj9dcrCFu4HsdOJdMssC8hoy0hYH4IdHRxhK+PB0qWtIJbF2f4eLrh4aPHcGzRGMs/34rx05ahXRs7PHz4iALd/JqXLCYEpBF4JAR6M9va8BvUAw8e5MC7f3fkCGU0GCeNGdUQAmaHQHbOI1hbW2PGlJE4uDMCZUqXQvbDZ3RFN7uWtDyDySMdERjj1xe1bWoqpbg4O2BA325CsJdExQrl0aZlE3zQqwsFuhId2hACZozA3BkBsG1UX+mB27sucH+vg3KfbRzsbBE8aRgFOgODEiFg6QjQPbqltzD5RwgICFCgCyDQf4tFgBx7hYCij3t7mHpq3NDmlbn0QwgQAgVBQLFz81KYevLs815BfCMeQoAQeIUAdd1fAcF+rl67gbiE07Lp7r2/GHmB0/Pnz2V1MDuSU1IldWRk3kBM7DHRdO/P+5J8qhX7Dp0Q5VeXm3Y5U5Utz/7R40miMuJPJuehk8pkZN4S5Ve3geWfPtXfu/msDX5M+gkLP92k/Faii8dHsHfxQh37XqjSyA01m/VA604fokf/cZgWtgK7936Hv/7mw1XKV/Xy23f+5PL9yZOn6qy5+awbv+Oztdvh5z8T7h/4493eAejay1/YD8CIcbOxMmoH0i5n0Kh7LmLCzqZtsejuOV42JaX8KlAX/D97TZFHz7SwCEklB+N+gOfQj0VTalqGJJ9qhdfwEFF+dbk7YuJU2fLsTwxeJiojaEZkHjqpzBHhxKquTyqfnZMjJYa7/Les3xE8JxINHfuhQ/fRwv5K5bcSJxLP41fhhHbz1h0hoB/gDyEIz/98Bd/GJ2Fx5BYMGBYCG7te8Bo2DXHxiUyfzinl/CVR7NT9/+PO3Ty6/v33X+z8Jg7v9Q1AA0dPTJi2FJu3H8aRY+eU77Uf//6csJ+MDVsPYvzHS4T6JRToeRCkjMUicO/Pv4SDfhGath0oXMWjkXXzD619/eefJ9i5NwHd+wcqgyz113StZRSEQfUEl5zyC9q5+sFreCjiTySDBb2cTCdHOwp0OZCo3vwR+Hr3t7BvP0joxu6Cpm6wNp6yIHPq6oeIVVvw4sULbVi1ps3OfqjkifxiKzq4j0Ky0BNQFnBu2rZuToHOiRWRmSEC7Hv7sUHzMWjULGVXXN8usJPG5NAV8PWfDaZL3/Jfy2Pvr89ftg6BwREoyDhFO2d7CvTXYNKvZSHw5MkTeI8IxeovYwzu2JYdhzB0TBhXN5rTmDxkEat3IHTemjxlvJl6dWqgRvWqFOi8gBGd+SDAutKjJnyCPfsTjGb013viEPbJF1rpe4EXXPTfHDjORSdG9FbrpspihXJLG0LAghBY9OkGRG8/aHSPPlm+EUePnTa6Xk0K2zq3VFZToCthoI2lIHD2XCpmzY/Syh0nx6YImeSHDZ/Pwv5ty3Bg+zJsWj0bwRN94dCsAbcs1pPwn7wgd742bkYDEro42SmlK5y7+qKwUlLyeaURtNEegWGDeuLOlUOiqZ2TPZfAG6n7RPnV5U4aO0hS3vEDq0VlHP1mhSSPasWQgd1F+dVtYHn2fbUqr/o+e9Q0ZtJ87gErt65v4dShNUg88iVmB4/G4AHu6O7qgm5dXZTTMs0JGYNzJ7Zg39bFsG9WHzx/l69m4YsNu3lIUUz4x0UoQaRQKNDSvhH8fN7HrKkjsWTuBIQLfkwYPRAd2zngjTes0bplMyW34tz5NLxMxv/Nzs5RGkEb7RGwtn45sQA7+NVTiRLFuQRWKF9OOTmBOr96nh0wUgLLlS0jKqNc2dJSLHnKra2tRPnVbWD5YsWK5eFVz2zauh9nf0pTL86XZ3OsrV42FbHbI/CWk0O+evUC9/c6Kk8GXv34XsVe9Gm08BjviboYveVLCQE8dfyHuHpuF84mbMbaFTMxY+oITBjjjelCz2TJvIlI2L8G1y9+g1Kl3lDqpa67EgbamDsCrNu8JDJa1g12Evx6XThGDOknS6tKwE52rDvfs3tH1WLRffZ23e59R0XrVAt5B+NUeeyFW4nkYxvx35ljYVOrumpVvn12cnxdSIH+Ggn6NWsE4o+fxs9p12R9CPt4JHq6d5alEyNgXeV1kTNQ5c2KYtV5yjZ8FZsnr4+MQ/MGiIv5DLYN62otjgJda8iIwRQR2LbrsKxZdW2qYfK4wbJ0mggqV6ogdJG9NJEo69hHPQ/0eGvKuuvb1s0TTjKVlPK13Rgp0LU1i+gJAX4EWLd976FTsgx+wgCmlZWVLJ0cwSDPbnIkwj36U8QfPyNLx0sQ6O+Fpo35nwCoy6VAV0eE8maHwOX0DNz6456s3V3faS1Lw0NQr64NatWoIkuamHRRloaHwMqqBMaO7M9DKklDgS4JDVWYCwJJKZe5TE1Ny+T6/pt9+y6X2OCcnNKkZP0EurNjE9SoXlVOncZ6CnSN8FClOSCQfpVvXb2AoEVc33+rfw8ulk/PyJKFJi39hiwND4GjQ1MeMo00FhDoGv2jyiKAwPWs303Sy9+ybnO/vKPJgapVK2uq5qpTfDxhCAor1a1Dkz5ytRIRaURAdWIGjYRGrmRv6t3+447OWksUL66zDMW8GQEorNSgfh2dHSABhMATDXOqFTY6d+7KDxIaw0bquhsDZdJhUARev+ZpUCUFFM5WNy0gq17ZKNA1wmmYSvbc1zCSi6bUMqX53qsvDHTYPHOFoVddJwW6OiJGyOfkvJwDzAiqioSKWjWrcfnZpkVDdG5vb9RUoXxZLtsMTUSBbmiEReRf+00/j11ERBfJonp1a3L5vXhuIOL2rjVqcmwl/3Ucl/E6ElGgqwCoKMYHx/Pn/6pwab97Oln+U0rtpRZdDodmfN+Kp1+7VWRB4juyiwg8pUpZc3l6565uK7XEfnsCAJcqgxKxxz8GVcAhnK2YwkGmkcTBrjHKlC6lkYZVHj76PfspkokCXaXZK1Uqr5KT3r2YyvfKpZiEy+mZiDuWJFalt7LinK2a89BwYwXFOY14+PCRzn4XF54zd+nYSlbO7v3HkZEp/0abrCAzJOA8JMzQswKYXKcW3/vEsd+eLID0lyxTZ0UabFrglxoA65J8zXo96+ZrFr3/vmHN1zu6flP3F0qY8X17ubIfjYk9bx83ZbFBFly4nC7/LbxG4wxcqXj27Dl4kil08wyMBZo3qcel4ue0azhwWPvud9SmPdBl6l4u4wSiypX4vllOuZghUBvmf+XK8pMzMM0XUjOE4+8Z29UpfdCzM3imr2Jr1oUv1G5aZk2GsUelM/+7Eo6dhuL4qbOaSAu1TvFGjbfBk6I27y1UQ42hvLZNTdSs/iaXKv9JC3Dj99tctIxo686DGCtcTdi+oVOtmnyPm3imOyqorZUqVkApjjGPv+9n47tjPxZUTS5fhfLlMGSgW25e086cRV8idG4kdB0fyLx+E719JuO/Szfh8eMn+GDoNKT+elWT6kKr4+vjFZp5xlfs1rUtl1LW5XTtPRZnz6VqpGeL+40OnIchY+YIV67nGmn1VdnYtj6XqP3fnsKPSRc00t5/kI1R48Oxev0OjXTqlQqFArYNaqsXi+ZnL4iSDbpTiSno7PGRxqWVpkzwBZuJRVSJWuH85dF4t7e/EJhX1Grks6ybHhS6HPYuPjhw5P8DfH/+9QAeAwORdfOWvBAjUyiMrM/k1Xn1k5895LUTl9Kvo333kfAdMxO79n6HtEvpyLh2HZcuX0XM/nhMmbEczdt5I2rzPoPcF762Q/3XqZWtepFonnU7e/kEYc/+/BMZ3rp9B/OXf4nGTv2xfkssps5aiUtXtLsPdWrVRFSvemFi0s/oO3gK2BVStY5dcX84/RMGDpuOzj39cTLxPPwnz1clybNfx6YG2EwseQo1ZJg8x06+6D90ihKD+w8eiFI/fvwPEs+kYO7idXjn/ZGwcxmE5au24ZFQrs6QmXUbvb2DwE6Q6nWFmadAV0PftUs7NKpfS61UOsueqUfvOCwcjCGwaz8Ytk4D0Fw4EDx9p2PZ59tw997f0swGqnFs0RyVOZ8gMPv6+wajtl3P3Pn967XoDRu7XkL3dnWu/TnC6LhfwBzZK6+qS13fcVbNatxnV8YmzgPg0N5baUertwfjzYZuePv90cJJND73RLln/zFs/Er6NjI0aDha2fOd6JhB7GSyJ/YEGAZVGrmjoWNfpX621gGzoXoTd5Sr0xUd3ccgbP4afH/6ouxgasrFyxjgNx1Pnz5lKkwiUaCrNQN7VDMtcKhaqXllmQ993n9bK6N/v30Xr+f3l1o7nF15FyzfwC23h1tH7q40E8oGhX+5dE1px8Vf0pEt8apwYHAEpN4utBZG+7eumwuemVqZTtXEBpwzr99S6mdYMBvYiZD1fFTpePbjEs4gfFEUD6lRaCjQRWD2G9wbnTo4itSYT9G4UV4oVkzzggcF8SZ88Xokp/zCxVpJGJAbPIBvgIxL4Cui+w9yMHzcXMkra+NG9bBn8wKuUfhXIvX+4+jQGBMDBuldbkEFUqCLIFesWDFsXBWGqlUqitTqXtTXozPqc76fXVBtrVo0waD++g+yp0+fwdc/TBhl/ofLtBChK12+XBkuWm2IEk4mY/nKaEkWl7YtcWRPZIGu7JJCOSu6vN0GhwXdlSryvYDFKVYnMgp0Cfhq16qOvV8tgb4PUl8fD3y1NhyVjXAQrFgYBDbpv4SLBS5m65OV4Fz2iQ2QrY8MBbudKLBCEcbqVSujbRvNa8w5OTZH4pEotG3dTESC/ovYUk+zp43EoZ2fwpSCnHlKgc5QkEjOre2QsG+V8JiIf3BOQhTKlimNzxZN6r4Y7QAABJJJREFURtSKUFhZWaFcmZJSpHorL1+uLA7siEBLu0Z6kWlT403ERC/AovBAlChRgltmH48uWLciWPBbjodPZL+enZEUvwHvdGgjy1CvTi3EC20YHvIR1/vwsgIlCFw7O+N03HqEBI3Q+0lNQqVWxRToMnC1EEZw2UJ2oUHDULFCORnq/NXsebJ3P1f8dHIzRg/7/9zc+u4p5Nf8sqRm9apIiF2Nj3x7g9nyslS7LfN75tThuPDDNnh076Qd8yvqwQN74Og3n8Guab1XJdr/OAtX5gPbl2L7l/NRo3oVbgFsgG76xGFITdyKSQFeypMuN7MGQmvrkvDq9y6Ox64SruIrYN+8kQbqwq1SRK+ZA57k2on/UYkxXWrUoB6O7Foqmzy6tS+wWaVLl0LYtI9w7fwerIkIQW/3DqgmdB2lBBYvroBji8YCzyhcOBWNzWvmom7tvN9MD/HpiZlTR2hMH3p5SKnQqrxc2TJYuWQ6zgsnmwmjB6BenRqy/OzFE9dOTmDd/6spuwU7RwmDW7rda7P75uRj0cKtyxx4dHNB6VcrfWoypnatahgx2APfxUTih8Pr0a1rwduRTVCxcE4gMi/EgN1OMBsqaDkxRN3aNTDUqzs2rZqFTOF4iF4zD+3faqXJBck6R2EcZefGBZBL/fu4SsrgrVCwF0R4UsP6NrwyjUpXRugSd+nUHnKpZo1qOttVpnRpDBvcE7s2L8GN1P24c+UQLpzchDPfrc1Nl858jQe/xePM0Y0IFQaimtjWF9X7QS9XIXhGakxDvHuJ8ha0sGnjBlgybxKuJO9WHqT7ti7G8k8mYV6oP2YLJ7JFc/6DLWvCcTZ+He5dPYJDuyLhP9xT5wBXtbd48eIY0LcbYr5ahrvph8GwY6uULpz9H6UNzJZPFwQhdttipY0ZP8VgdUQoOnV0UhWj0z67pRni7aG04falg0g6GiWcfOYqcZg+0RcT/b0xeawPQib74ZOZAWALKx7ZHYGsn/ci/dxurPssDD793fFmZb5vCqSMrValEvr06CSbmthqv6iiuk7quqsjokWeLUvbrKktHFva56YG9euADcpoIaZQSGvVrA627ve4UQPwceBQ4d5ymPJx0MB+76GlQ3O93U9rcs7KqoQSNx9PN0waO0hpA7MlYIQn3Fw7gtmoiV+7OnFqduJp1cJOOPm4KnEIDxkjjEFMwILZ4zF7+mhMGT8EQ717oMs7b6F6tSow1z8KdHNtObKbENACAQp0LcAiUkLAXBGgQDfXliO7CQEtEKBA1wIsIiUExBEw/VIKdNNvI7KQENAZAQp0nSEkAYSA6SNAgW76bUQWEgI6I0CBrjOEJIAQMCQC+pFNga4fHEkKIWDSCFCgm3TzkHGEgH4QoEDXD44khRAwaQQo0E26ecg4QkA/CIgHun5kkxRCgBAwEQQo0E2kIcgMQsCQCFCgGxJdkk0ImAgCFOgm0hBkBiFgSASMH+iG9IZkEwKEgCgCFOiisFAhIWBZCFCgW1Z7kjeEgCgCFOiisFAhIWBZCFhWoFtW25A3hIDeEKBA1xuUJIgQMF0E/gcAAP//sCFc3QAAAAZJREFUAwC2b2ekNvdspAAAAABJRU5ErkJggg==" 
+                alt="Flutter Entertainment Logo" 
+                class="flutter-logo-img"
+            />
+            <!-- Optional: Keep text as fallback or remove if not needed -->
             <div class="flutter-logo">Flutter Entertainment</div>
         </div>
         
